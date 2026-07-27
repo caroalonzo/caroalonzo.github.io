@@ -49,6 +49,14 @@
   .nav-logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px; letter-spacing:-0.01em;}
   .nav-logo img{width:30px; height:30px;}
   .nav-links{display:flex; align-items:center; gap:28px; font-size:14px; font-weight:600;}
+  .nav-link-text{display:inline;}
+  @media (max-width:640px){
+    .nav-logo{font-size:15px;}
+    .nav-logo img{width:26px; height:26px;}
+    .nav-links{gap:10px;}
+    .nav-link-text{display:none;}
+    .nav-cta{padding:8px 14px; font-size:13px;}
+  }
   .nav-links a{text-decoration:none; color:var(--ink); opacity:0.75;}
   .nav-links a:hover{opacity:1;}
   .nav-cta{
@@ -118,7 +126,13 @@
   @media (max-width:860px){
     .hero .wrap{grid-template-columns:1fr; padding-top:52px; padding-bottom:56px;}
     .hero-photo{order:-1; max-width:280px; margin:0 auto;}
-    .hero-badge{left:8px;}
+    .hero-badge{
+      position:static; left:auto; bottom:auto;
+      margin:14px auto 0; max-width:none; width:100%;
+      text-align:center; box-shadow:none;
+      background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); color:#fff;
+    }
+    .hero-badge strong{color:var(--teal-pale);}
   }
 
   /* SECTION HEAD */
@@ -212,9 +226,9 @@
         Caro Alonzo
       </div>
       <div class="nav-links">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#plan">Plan</a>
-        <a href="#faq">Preguntas</a>
+        <a href="#sobre-mi" class="nav-link-text">Sobre mí</a>
+        <a href="#plan" class="nav-link-text">Plan</a>
+        <a href="#faq" class="nav-link-text">Preguntas</a>
         <a class="nav-cta" href="https://wa.me/59895069422?text=Hola%20Carolina%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20tu%20plan%20de%20entrenamiento%20online" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
